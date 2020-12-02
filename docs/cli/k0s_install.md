@@ -1,16 +1,16 @@
-## k0s etcd leave
+## k0s install
 
-Sign off a given etc node from etcd cluster
+Helper command for setting up k0s on a brand-new system. Must be run as root (or with sudo)
 
 ```
-k0s etcd leave [flags]
+k0s install [flags]
 ```
 
 ### Options
 
 ```
-  -h, --help                  help for leave
-      --peer-address string   etcd peer address
+  -h, --help          help for install
+      --role string   node role (possible values: server or worker. In a single-node setup, a worker role should be used) (default "server")
 ```
 
 ### Options inherited from parent commands
@@ -24,5 +24,5 @@ k0s etcd leave [flags]
 
 ### SEE ALSO
 
-* [k0s etcd](k0s_etcd.md)	 - Manage etcd cluster
+* [k0s](k0s.md)	 - k0s - Zero Friction Kubernetes
 

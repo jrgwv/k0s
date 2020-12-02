@@ -1,16 +1,27 @@
-## k0s etcd leave
+## k0s kubeconfig admin
 
-Sign off a given etc node from etcd cluster
+Manage user access
+
+### Synopsis
+
+Command dumps admin kubeconfig.
 
 ```
-k0s etcd leave [flags]
+k0s kubeconfig admin [command] [flags]
+```
+
+### Examples
+
+```
+	$ k0s kubeconfig admin > kubeconfig
+	$ export KUBECONFIG=kubeconfig
+	$ kubectl get nodes
 ```
 
 ### Options
 
 ```
-  -h, --help                  help for leave
-      --peer-address string   etcd peer address
+  -h, --help   help for admin
 ```
 
 ### Options inherited from parent commands
@@ -24,5 +35,5 @@ k0s etcd leave [flags]
 
 ### SEE ALSO
 
-* [k0s etcd](k0s_etcd.md)	 - Manage etcd cluster
+* [k0s kubeconfig](k0s_kubeconfig.md)	 - Manage user access
 
